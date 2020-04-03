@@ -1,0 +1,55 @@
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">permission</th>
+        <th scope="col">Status</th>
+        <th scope="col">Ask</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>location</td>
+        <td>{{Status.location}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.location" (click)="get_location()" >  Ask Permission </button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>camera</td>
+        <td>{{Status.camera}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.camera" (click)="get_camera()" >  Ask Permission </button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>microphone</td>
+        <td>{{Status.microphone}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.microphone" (click)="get_microphone()" >  Ask Permission </button></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>notifications</td>
+        <td>{{Status.notifications}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.notifications" (click)="get_notifications()" >  Ask Permission </button></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>pop_up</td>
+        <td>{{Status.pop_up}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.pop_up" (click)="get_pop_up()" >  Ask Permission </button></td>
+      </tr>    
+      <tr>
+        <th scope="row">6</th>
+        <td>sync</td>
+        <td>{{Status.sync}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.sync" (click)="get_sync()" >  Ask Permission </button></td>
+      </tr>            
+      <tr>
+        <th scope="row">7</th>
+        <td>clipboard</td>
+        <td>{{Status.clipboard}}</td>
+        <td><button type="button" class="btn btn-primary" [disabled]="Flag.clipboard" (click)="get_clipboard()" >  Ask Permission </button></td>
+      </tr>      
+
+    </tbody>
+  </table>

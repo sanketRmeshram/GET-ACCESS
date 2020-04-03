@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PermissionTableComponent } from './permission-table/permission-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PermissionTableComponent
   ],
   imports: [
     BrowserModule,
