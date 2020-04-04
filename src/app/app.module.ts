@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PermissionTableComponent } from './permission-table/permission-table.component';
+// import { Router } from '@angular/router';
+// import { PushNotificationsModule } from 'ng-push'; //import the module
 
 @NgModule({
   declarations: [
@@ -13,7 +15,10 @@ import { PermissionTableComponent } from './permission-table/permission-table.co
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],
+    // Router
+    // PushNotificationsModule
+  ]
+  ,
   providers: [],
   bootstrap: [AppComponent]
 })

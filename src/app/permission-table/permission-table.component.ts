@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { PushNotificationsModule } from 'ng-push';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-permission-table',
   templateUrl: './permission-table.component.html',
@@ -75,26 +76,37 @@ export class PermissionTableComponent implements OnInit {
       );
     }    
   }
-  get_notifications(){
-    // swRegistration.pushManager.getSubscription()
-    // .then((subscription)=>{
-    //   isSubscribed = !(subscription === null);
+  async get_notifications(){
 
-    //   if (isSubscribed) {
-    //     console.log('User IS subscribed.');
-    //   } else {
-    //     console.log('User is NOT subscribed.');
-    //   }     
-    // });
-    // navigator.swPush.requestSubscription().then{
-
-    // }
+    let now=await Notification.requestPermission();
+    if(now==='granted'){
+      this.Flag.notifications=true;
+      this.Status.notifications="Allowed";
+    }
+    else{
+      this.Flag.notifications=true;
+      this.Status.notifications="Blocked";
+    }
   }
   get_pop_up(){
+    // let r: Router;
+    // // r.navigate(app-permission-table);
+    // r.navigateByUrl('../app.component.html').then((per) => {
+    //   this.Flag.pop_up=true;
+    //   this.Status.pop_up="Allowed";
+    // },(error)=>{
+    //   // console.log(error);
+    //   this.Flag.pop_up=true;
+    //   this.Status.pop_up="Blocked";
+    // }
+    // );
+
   
   }
   get_sync(){
-  
+    // navigator.serviceWorker.ready.then(function(reg) {
+    //   return reg.sync.register('tag-name');
+    // }).catch
   }
   get_clipboard  (){
     navigator.clipboard.readText().then(text =>{
